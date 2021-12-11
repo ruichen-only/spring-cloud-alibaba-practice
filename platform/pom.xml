@@ -11,11 +11,6 @@
 
     <artifactId>platform</artifactId>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.tidever</groupId>
@@ -24,10 +19,6 @@
         <dependency>
             <groupId>com.tidever</groupId>
             <artifactId>mbg</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.tidever</groupId>
-            <artifactId>search</artifactId>
         </dependency>
         <!--nacos service discovery client依赖-->
         <dependency>
