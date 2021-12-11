@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 39185fe8-f8dc-49d6-8c5e-ac6652d8b187
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 39185fe8-f8dc-49d6-8c5e-ac6652d8b187
+        group: DEFAULT_GROUP  # 默认分组就是DEFAULT_GROUP，如果使用默认分组可以不配置
+        file-extension: yml   #默认properties
+dubbo:
+  registry:
+    address: spring-cloud://127.0.0.1
