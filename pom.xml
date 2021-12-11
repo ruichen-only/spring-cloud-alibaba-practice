@@ -28,7 +28,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <mbg.version>1.4.0</mbg.version>
-        <mybatis.version>3.5.7</mybatis.version>
+        <mybatis.version>3.5.8</mybatis.version>
         <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
         <pagehelper-starter.version>1.3.0</pagehelper-starter.version>
