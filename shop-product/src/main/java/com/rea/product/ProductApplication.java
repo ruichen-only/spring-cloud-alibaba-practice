@@ -7,12 +7,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * 启动平台服务入口。
  *
- * @author tidever
+ * @author CRR
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class PlatformApplication {
+public class ProductApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PlatformApplication.class, args);
+        SpringApplication.run(ProductApplication.class, args);
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 用于生产MBG的代码
- * @author tidever
+ * @author CRR
  */
 public class Generator {
     public static void main(String[] args) throws Exception {
