@@ -1,7 +1,0 @@
-server:
-  port: 8009
-spring:
-  profiles:
-    active: dev
-  application:
-    name: platform

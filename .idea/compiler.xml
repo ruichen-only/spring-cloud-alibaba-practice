@@ -6,23 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="search" />
-        <module name="mbg" />
-        <module name="common" />
-        <module name="application" />
-        <module name="gateway" />
-        <module name="platform" />
+        <module name="shop-gateway" />
+        <module name="shop-product" />
+        <module name="shop-user" />
+        <module name="shop-mbg" />
+        <module name="shop-common" />
+        <module name="shop-order" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="search" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="application" options="-parameters" />
-      <module name="common" options="-parameters" />
-      <module name="gateway" options="-parameters" />
-      <module name="mbg" options="-parameters" />
-      <module name="platform" options="-parameters" />
       <module name="search" options="-parameters" />
+      <module name="shop-common" options="-parameters" />
+      <module name="shop-gateway" options="-parameters" />
+      <module name="shop-mbg" options="-parameters" />
+      <module name="shop-order" options="-parameters" />
+      <module name="shop-product" options="-parameters" />
+      <module name="shop-user" options="-parameters" />
     </option>
   </component>
 </project>
