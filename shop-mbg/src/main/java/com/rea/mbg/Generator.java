@@ -19,19 +19,20 @@ public class Generator {
         List<String> warnings = new ArrayList<>();
         //当生成的代码重复时，覆盖原代码
         boolean overwrite = true;
-        Configuration config;
         //读取我们的 MBG 配置文件
-        try(InputStream is = Generator.class.getResourceAsStream("/generatorConfig.xml")) {
-            ConfigurationParser cp = new ConfigurationParser(warnings);
-            config = cp.parseConfiguration(is);
-        }
+        InputStream is = Generator.class.getResourceAsStream("/generatorConfig.xml");
+        ConfigurationParser cp = new ConfigurationParser(warnings);
+        Configuration config = cp.parseConfiguration(is);
+        assert is != null;
+        is.close();
+
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
         //创建 MBG
         MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
         //执行生成代码
         myBatisGenerator.generate(null);
         //输出警告信息
-        for (String warning : warnings) {
+        for(String warning : warnings) {
             System.out.println(warning);
         }
     }

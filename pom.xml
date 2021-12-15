@@ -66,6 +66,18 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--项目共通依赖-->
+            <dependency>
+                <groupId>com.rea</groupId>
+                <artifactId>shop-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <!--mbg依赖-->
+            <dependency>
+                <groupId>com.rea</groupId>
+                <artifactId>shop-mbg</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
             <!--Spring Cloud 相关依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

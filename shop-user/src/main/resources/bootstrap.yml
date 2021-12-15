@@ -4,4 +4,4 @@ spring:
   profiles:
     active: dev
   application:
-    name: application
+    name: shop-user
