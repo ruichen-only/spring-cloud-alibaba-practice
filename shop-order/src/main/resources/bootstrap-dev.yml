@@ -9,11 +9,7 @@ spring:
         namespace: dfa414fe-6383-45bc-9a31-803a9c475c57
         file-extension: yml   #默认properties
 dubbo:
-  scan:
-    base-packages: com.rea.product.service
-  protocols:
-    dubbo:
-      name: dubbo
-      port: -1
   registry:
     address: spring-cloud://localhost
+  cloud:
+    subscribed-services: shop-product
