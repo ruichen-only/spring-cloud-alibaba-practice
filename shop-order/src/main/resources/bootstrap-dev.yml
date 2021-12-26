@@ -8,6 +8,10 @@ spring:
         server-addr: 127.0.0.1:8848
         namespace: dfa414fe-6383-45bc-9a31-803a9c475c57
         file-extension: yml   #默认properties
+    sentinel:
+      transport:
+        dashboard: http://localhost:9000 #配置Sentinel dashboard地址
+        port: 8719  #这个端口配置会在应用对应的机器上启动一个Http Server，该Server会与 Sentinel 控制台做交互
 dubbo:
   registry:
     address: spring-cloud://localhost
