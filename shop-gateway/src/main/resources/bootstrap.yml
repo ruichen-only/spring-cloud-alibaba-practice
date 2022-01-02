@@ -6,7 +6,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: product  # 当前路由的标识, 要求唯一
+        - id: shop-product  # 当前路由的标识, 要求唯一
           uri: lb://shop-product # 请求要转发到的地址
           order: 1 # 路由的优先级,数字越小级别越高
           predicates:
