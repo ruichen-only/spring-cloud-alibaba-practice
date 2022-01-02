@@ -1,5 +1,3 @@
-server:
-  port: 8010
 spring:
   profiles:
     active: dev
