@@ -9,3 +9,9 @@ spring:
         namespace: dfa414fe-6383-45bc-9a31-803a9c475c57
         group: DEFAULT_GROUP  # 默认分组就是DEFAULT_GROUP，如果使用默认分组可以不配置
         file-extension: yml   #默认properties
+  zipkin:
+    base-url: http://127.0.0.1:9411/ #zipkin server的请求地址
+    discovery-client-enabled: false #让nacos把它当成一个URL，而不要当做服务名
+  sleuth:
+    sampler:
+      probability: 1.0  #采样的百分比
