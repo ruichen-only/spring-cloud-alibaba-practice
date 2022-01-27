@@ -7,6 +7,7 @@ import com.rea.order.service.OrderService;
 import com.rea.product.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,8 @@ public class OrderController {
     private ProductService productService;
     @Autowired
     private OrderService orderService;
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;
 
     @GetMapping("/order")
     public ShopOrder order(Integer pid) {
@@ -39,6 +42,9 @@ public class OrderController {
         log.info(">>-----" + JSONUtil.toJsonStr(order));
 
         orderService.save(order);
+
+        //下单成功之后,将消息放到mq中
+        rocketMQTemplate.convertAndSend("order-topic", order);
 
         return order;
     }

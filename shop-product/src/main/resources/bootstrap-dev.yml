@@ -2,11 +2,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
-        namespace: dfa414fe-6383-45bc-9a31-803a9c475c57
+        server-addr: 192.168.8.221
+#        namespace: dfa414fe-6383-45bc-9a31-803a9c475c57
       config:
-        server-addr: 127.0.0.1:8848
-        namespace: dfa414fe-6383-45bc-9a31-803a9c475c57
+        server-addr: 192.168.8.221
+#        namespace: dfa414fe-6383-45bc-9a31-803a9c475c57
         file-extension: yml   #默认properties
   zipkin:
     base-url: http://127.0.0.1:9411/ #zipkin server的请求地址
